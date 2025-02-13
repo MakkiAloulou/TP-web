@@ -21,10 +21,7 @@ function playGame() {
     const { name, min, max, attempts } = getDifficultySettings();
     const secretNumber = getRandomNumber(min, max);
     let remainingAttempts = attempts;
-    if ({name,min,max,attempts}=null){
-        alert("Jeu annulé.");
-        return;
-    }
+
     alert(`Vous avez choisi le mode ${name}. Trouvez le nombre entre ${min} et ${max}. Vous avez ${attempts} tentatives !`);
 
     while (remainingAttempts > 0) {
@@ -64,5 +61,4 @@ function playGame() {
         alert("Merci d'avoir joué !");
     }
 }
-
 playGame();
