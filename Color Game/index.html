@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #b82dc2;
+        }
+        #TheList li {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Game</h1>
+        <ol id="TheList">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+        </ol>
+    <script>
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+        const listItems = document.querySelectorAll('#TheList li');
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.color = getRandomColor();
+            });
+        });
+    </script>
+</body>
+
+</html>
